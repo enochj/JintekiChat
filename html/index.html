@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.js"></script>
+<head>
+<meta charset="ISO-8859-1">
+<title>JintekiChat</title>
+</head>
+<body>
+<h3>Chat:</h3>
+<div ng-app="chatbox" ng-controller="myCtrl">
+	First Name: <input type="text" ng-model="firstName"><br>
+	Last Name: <input type="text" ng-model="lastName"><br>
+	<br>
+	Full Name: {{firstName + " " + lastName}}
+	<br>
+	<ul>
+		<li ng-repeat="x in chatData">
+			{{ chatData }}
+		</li>
+	</ul>
+</div>
+
+<!--   <div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+	<ul>
+		<li ng-repeat="x in names">
+			{{ x }}
+		</li>
+	</ul>
+</div>
+-->
+
+</body>
+</html>
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script-->
+<script src="../js/script.js"></script>
