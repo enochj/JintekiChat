@@ -5,6 +5,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.js"></script>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
 <title>JintekiChat</title>
 </head>
 <body>
@@ -15,11 +16,11 @@
 	<br>
 	Full Name: {{firstName + " " + lastName}}
 	<br>
-	<ul>
-		<li ng-repeat="x in chatData">
-			{{ chatData }}
-		</li>
-	</ul>
+	<table border="1" width="100%">
+		<tr id="chatList" ng-repeat="x in chatData | orderBy:'-date'">
+			<td>{{x.username}}</td>
+			<td>{{ x.msg }}</td>
+	</table>
 </div>
 
 <!--   <div ng-app="" ng-init="names=['Jani','Hege','Kai']">
